@@ -4,10 +4,15 @@ metadata:
   name: example-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - test.k8s.harryesses.com
+    secretName: example-tls
   rules:
-  - host: test.k8s.test
+  - host: test.k8s.harryesses.com
     http:
       paths:
       - path: /
