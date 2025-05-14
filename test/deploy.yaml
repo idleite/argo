@@ -16,8 +16,6 @@ spec:
     spec:
       containers:
       - name: example-app
-        image: hashicorp/http-echo
-        args:
-        - "-text=Hello from Kubernetes"
+        image: nginx:latest
         ports:
-        - containerPort: 5678
+        - containerPort: 80
