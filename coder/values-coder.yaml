@@ -1,0 +1,38 @@
+coder:
+env:
+  - name: CODER_PG_CONNECTION_URL
+    value: "postgresql://coder:SiWg8ce*?eQm,x+@10.10.1.202/coder?sslmode=disable"
+
+
+  - name: CODER_WILDCARD_ACCESS_URL
+    value: "*.coder.harryesses.com"
+
+  - name: CODER_EXTERNAL_AUTH_0_ID
+    value: "gitea"
+
+  - name: CODER_EXTERNAL_AUTH_0_TYPE
+    value: "gitea"
+
+  - name: CODER_EXTERNAL_AUTH_0_CLIENT_ID
+    value: "e271680e-a5ac-406d-b64f-ee785416d524"
+
+  - name: CODER_EXTERNAL_AUTH_0_CLIENT_SECRET
+    value: "gto_paw5lj3ozurtnppr4ev5ju5e4zduuf4yogyogqbtfcdzzxyye6uq"
+
+  - name: CODER_EXTERNAL_AUTH_0_AUTH_URL
+    value: "https://git.harryesses.com/login/oauth/authorize"
+
+  - name: CODER_ACCESS_URL
+    value: "coder.harryesses.com"
+
+  - name: CODER_OIDC_ISSUER_URL
+    value: "https://auth.harryesses.com/application/o/coder/"
+
+  - name: CODER_OIDC_EMAIL_DOMAIN
+    value: "harryesses.com,jimmysmp.com"
+
+  - name: CODER_OIDC_CLIENT_ID
+    value: "FqyKCMekF4o4AE7XdDGJmJQ9vndKlsavRLgWNjzw"
+
+  - name: CODER_OIDC_CLIENT_SECRET
+    value: "9pCMdhosoBc7HaxX8n8qKJOj9G91X4zP10FTC4bIDOyiJrTL8hnKG5yE58kYGxtT27kVaZJx19Ou2WWP8kVI9ShxBtPYYizyqwIMWDhYmMhqwAUotWkq2ELkFjUJROuJ"
