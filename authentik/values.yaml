@@ -1,0 +1,20 @@
+authentik:
+  secret_key: "W4VQUreSixCyzkvEkTYt21whI1GDIaypd2B5qQviSlnh5LCvgO7h4xBmRiGvZsXNDuPKRFTVqQeCNlfh"
+  postgresql:
+    host: web.hosts.harryesses.com
+    user: authentik
+    password: H92InFmRGHGhYG/BESjR4KyxUgriSTBmxUTukv/AdxQ52bM3
+  redis:
+    host: web.hosts.harryesses.com
+server:
+  ingress:
+    annotations:
+      cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    ingressClassName: nginx
+    enabled: true
+    hosts:
+      - auth.harryesses.com
+    tls:
+      - hosts:
+        - auth.harryesses.com
+        secretName: authentik-tls
