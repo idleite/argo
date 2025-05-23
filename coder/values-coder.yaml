@@ -36,3 +36,17 @@ coder:
 
     - name: CODER_OIDC_CLIENT_SECRET
       value: "9pCMdhosoBc7HaxX8n8qKJOj9G91X4zP10FTC4bIDOyiJrTL8hnKG5yE58kYGxtT27kVaZJx19Ou2WWP8kVI9ShxBtPYYizyqwIMWDhYmMhqwAUotWkq2ELkFjUJROuJ"
+workspacePVC:
+  enabled: true
+
+workspaces:
+  additionalVolumes:
+    - name: ssh-key
+      secret:
+        secretName: ssh-key
+        defaultMode: 0400
+
+  additionalVolumeMounts:
+    - name: ssh-key
+      mountPath: /home/coder/.ssh
+      readOnly: true
