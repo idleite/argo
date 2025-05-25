@@ -23,6 +23,8 @@ coder:
       nginx.ingress.kubernetes.io/proxy-read-timeout: "3600",
       nginx.ingress.kubernetes.io/proxy-send-timeout: "3600",
       nginx.ingress.kubernetes.io/use-http2: "true",
+      nginx.ingress.kubernetes.io/proxy-buffering: "off",
+      nginx.ingress.kubernetes.io/proxy-http-version: "1.1"
     }
     # coder.ingress.tls -- The TLS configuration to use for the Ingress.
     tls:
