@@ -39,7 +39,7 @@ coder:
     - name: CODER_PG_CONNECTION_URL
       value: "postgresql://coder:SiWg8ce*?eQm,x+@10.10.1.202/coder?sslmode=disable"
     - name: CODER_DERP_FORCE_WEBSOCKETS
-      value: true
+      value: "true"
 
     - name: CODER_WILDCARD_ACCESS_URL
       value: "*.coder.harryesses.com"
