@@ -1,0 +1,181 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Management:
+    - Proxmox:
+        icon: sh-proxmox
+        href: https://proxmox.harryesses.com
+        description: Proxmox
+        widget:
+            type: proxmox
+            url: https://10.10.1.201:8006
+            username: api@pam!homepage
+            password: 99418456-a65a-410e-aa94-6f1707ac090e
+    - Headplane:
+        icon: si-headplane
+        href: https://headplane.harryesses.com/admin
+        description: Headscale Managment
+    - Guacamole:
+        icon: sh-guacamole
+        href: https://guac.harryesses.com/guacamole
+        description: Remote SSH
+    - Dockge: 
+        icon: sh-docker
+        href: https://dockge.harryesses.com
+        description: Docker Compose Managment
+    - Uptime: 
+        icon: sh-uptimekuma
+        href: https://uptime.harryesses.com
+        description: Uptime tracker
+
+- Media:
+    - Jellyfin:
+        icon: sh-jellyfin
+        href: https://jellyfin.harryesses.com
+        description: Media Viewer
+        widget:
+            type: jellyfin
+            url: https://jellyfin.harryesses.com
+            key: c174d6a6ed474fd68dd4b2d9b783eb64
+            enableBlocks: true # optional, defaults to false
+            enableNowPlaying: true # optional, defaults to true
+            enableUser: true # optional, defaults to false
+            showEpisodeNumber: true # optional, defaults to false
+            expandOneStreamToTwoRows: false # optional, defaults to true
+    - Jellyseerr:
+        icon: sh-jellyseerr
+        href: https://jellyseerr.harryesses.com
+        description: Media Requester
+        widget:
+            type: jellyseerr
+            url: https://jellyseerr.harryesses.com
+            key: MTcxNDkxOTk3MTE2MjU4ZGZmMGU0LWM2ZmYtNDZlNS1hMDgzLTM2N2JmYzkzZjEyZA==
+    - Ersatz:
+        # icon: si-jellyfin-#00A4DC
+        href: https://ersatz.harryesses.com
+        description: TV scheduler
+    - Metube:
+        icon: sh-youtube
+        href: https://metube.harryesses.com
+        description: Youtube Downloader
+    - Qbittorent:
+        icon: sh-qbittorrent
+        href: https://qbit.harryesses.com
+        description: Torrent Downloader
+    - Radarr:
+        icon: sh-radarr
+        href: https://radarr.harryesses.com
+        description: Movie Searcher
+        widget:
+            type: radarr
+            url: http://main.hosts.harryesses.com:7878
+            key: 0172ba5c5cdb4e3b879037ce002b8e85
+            enableQueue: true # optional, defaults to false
+    - Sonarr:
+        icon: sh-sonarr
+        href: https://sonarr.harryesses.com
+        description: TV Searcher
+        widget:
+             type: sonarr
+             url: http://main.hosts.harryesses.com:8989
+             key: 80b087ccfd454bfaab0f7fff6ee5d35b
+             enableQueue: true # optional, defaults to false
+- Development:
+    - Coder:
+        icon: sh-coder
+        href: https://Coder.harryesses.com
+        description: Remote Development
+    - Gitea:
+        icon: sh-gitea
+        href: https://git.harryesses.com
+        description: Git repository
+        widget:
+            type: gitea
+            url: http://10.10.1.203:3000
+            key: 4117323b5d5265e6678ccb921273f27b43ad9dd8
+    - Main VS Code:
+        icon: sh-visual-studio-code
+        href: https://main.code.harryesses.com
+        description: Main Server File editor
+    - Web VS Code:
+        icon: sh-visual-studio-code
+        href: https://web.code.harryesses.com
+        description: Web Server File editor
+- Misc:
+    - Calendar:
+        href: https://calendar.google.com/calendar/u/0/r
+        widget:
+            type: calendar
+            firstDayInWeek: sunday # optional - defaults to monday
+            view: monthly # optional - possible values monthly, agenda
+            maxEvents: 20 # optional - defaults to 10
+            showTime: true # optional - show time for event happening today - defaults to false
+            timezone: America/New_York # optional and only when timezone is not detected properly (slightly slower performance) - force timezone for ical events (if it's the same - no change, if missing or different in ical - will be converted to this timezone)
+            integrations: # optional
+              - type: ical # Show calendar events from another service
+                url: https://ical.harryesses.com/Y4-10HH/Harry # URL with calendar events
+                name: School Tests # required - name for these calendar events
+                color: pink # optional - defaults to pre-defined color for the service (zinc for ical)
+    - Calendar:
+        href: https://calendar.google.com/calendar/u/0/r
+        widget:
+            type: calendar
+            firstDayInWeek: sunday # optional - defaults to monday
+            view: agenda # optional - possible values monthly, agenda
+            maxEvents: 20
+            showTime: true # optional - show time for event happening today - defaults to false
+            timezone: America/New_York # optional and only when timezone is not detected properly (slightly slower performance) - force timezone for ical events (if it's the same - no change, if missing or different in ical - will be converted to this timezone)
+            integrations: # optional
+              - type: ical # Show calendar events from another service
+                url: https://ical.harryesses.com/Y4-10HH/Harry # URL with calendar events
+                name: School Tests # required - name for these calendar events
+                color: pink # optional - defaults to pre-defined color for the service (zinc for ical)
+- Network:
+    - Pihole:
+        icon: sh-pihole
+        href: https://pihole.harryesses.com/admin
+        widget:
+            type: pihole
+            url: http://10.10.1.205
+    - Unfi:
+        icon: sh-ubiquiti-unifi
+        href: https://unfi.harryesses.com
+        widget:
+            type: unifi
+            url: https://10.10.1.204:8443
+            username: harryesses@harryesses.com
+            password: Goyanks12345
+    - OPNsense:
+        icon: si-authentik-#FD4B2D
+        href: https://opnsense.harryesses.com
+        widget:
+            type: opnsense
+            url: http://10.10.1.1 
+            username: +HlPfK+Q+4x23cvA4/QW5KvfRWgNDeHcM1qZgVVPLTK13j4Kjrp7z3myMBJaqCIw9nicrc4apxVAPIBe
+            password: pYSHDDkvUEE4MbUXKmjO8560UKU+HmpssmR5pk+vXLFC9Us7Yu5NKZ9sfD0fNEacLclml6b4TpnXdkxA
+- Main:
+    - FreshRSS:
+        href: https://rss.harryesses.com
+        widget:
+          type: freshrss
+          url: http://10.10.1.203:8970
+    - Authentik:
+        icon: si-authentik-#FD4B2D
+        href: https://auth.harryesses.com
+        widget:
+            type: authentik
+            url: https://auth.harryesses.com
+            key: WLpCG1qu7W7g1UnK1K3TWFGxfwuce69BVoFjGw88bY3fEYL1WOPZoEw7D7Xp
+    - Mail:
+        icon: mdi-email-#007ACC
+        href: https://mail.harryesses.com
+    - Nextcloud:
+        icon: si-nextcloud-#0082C9
+        href: https://nextcloud.harryesses.com
+
+
+
+
+
+
