@@ -19,6 +19,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: homepage-service-clusterip
+            name: homepage
             port:
               number: 3000
