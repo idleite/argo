@@ -28,7 +28,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: HOMEPAGE_ALLOWED_HOSTS
-              value: homepage.harryesses.com,10.10.33.3:3000
+              value: homepage.harryesses.com,10.10.33.3:3000,10.10.33.3
           ports:
             - name: http
               containerPort: 3000
