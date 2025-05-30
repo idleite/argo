@@ -6,26 +6,28 @@ metadata:
   labels:
     app.kubernetes.io/name: homepage
 spec:
-  revisionHistoryLimit: 3
+  # revisionHistoryLimit: 3
   replicas: 1
-  strategy:
-    type: RollingUpdate
+  # strategy:
+  #   type: RollingUpdate
   selector:
     matchLabels:
       app.kubernetes.io/name: homepage
+      app: homepage
   template:
     metadata:
       labels:
         app.kubernetes.io/name: homepage
+        app: homepage
     spec:
-      serviceAccountName: homepage
-      automountServiceAccountToken: true
-      dnsPolicy: ClusterFirst
-      enableServiceLinks: true
+      # serviceAccountName: homepage
+      # automountServiceAccountToken: true
+      # dnsPolicy: ClusterFirst
+      # enableServiceLinks: true
       containers:
         - name: homepage
           image: "ghcr.io/gethomepage/homepage:latest"
-          imagePullPolicy: Always
+          # imagePullPolicy: Always
           env:
             - name: HOMEPAGE_ALLOWED_HOSTS
               value: homepage.harryesses.com,10.10.33.3:3000,10.10.33.3
