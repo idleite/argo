@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ical-app
+  labels:
+    app: ical
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ical
+  template:
+    metadata:
+      labels:
+        app: ical
+    spec:
+      containers:
+      - name: ical-app
+        image: ghcr.io/idleite/ical:master
+        ports:
+        - containerPort: 80
+          protocol: TCP
