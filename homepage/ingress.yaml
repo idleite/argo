@@ -20,6 +20,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: homepage-service
+            name: homepage
             port:
               number: 3000
