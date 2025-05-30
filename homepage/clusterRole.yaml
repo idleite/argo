@@ -4,6 +4,7 @@ metadata:
   name: homepage
   labels:
     app.kubernetes.io/name: homepage
+    namespace: homepage
 rules:
   - apiGroups:
       - ""
