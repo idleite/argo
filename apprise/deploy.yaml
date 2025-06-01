@@ -19,7 +19,7 @@ spec:
       - name: mailrise
         image: yoryan/mailrise:latest
         ports:
-        - containerPort: 25
+        - containerPort: 8025
           name: smtp
         volumeMounts:
           - mountPath: /etc/mailrise.conf

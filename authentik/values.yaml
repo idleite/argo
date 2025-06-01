@@ -10,7 +10,7 @@ authentik:
     # -- SMTP Server emails are sent from, fully optional
     host: "mailrise.mailrise.svc.cluster.local"
     # -- SMTP server port
-    port: 25
+    port: 8025
     # -- SMTP credentials, when left empty, no authentication will be done
     username: ""
     # -- SMTP credentials, when left empty, no authentication will be done

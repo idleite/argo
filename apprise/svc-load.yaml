@@ -9,7 +9,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 25
+    - port: 8025
       targetPort: smtp
       protocol: TCP
       name: smtp
