@@ -21,3 +21,7 @@ spec:
         ports:
         - containerPort: 25
           name: smtp
+          volumeMounts:
+            - mountPath: /etc/mailrise.conf
+              name: mailrise-config
+              subPath: mailrise.conf

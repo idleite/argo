@@ -6,7 +6,7 @@ metadata:
 data:
 
   # file-like keys
-  config: |
+  mailrise.conf: |
     configs:
     harryessesdev@harryesses.com:
       urls:
