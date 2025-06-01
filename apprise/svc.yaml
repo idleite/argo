@@ -15,3 +15,4 @@ spec:
       name: smtp
   selector:
     app.kubernetes.io/name: mailrise
+    app: mailrise
