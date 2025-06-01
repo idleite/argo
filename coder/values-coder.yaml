@@ -72,7 +72,7 @@ coder:
       value: "FqyKCMekF4o4AE7XdDGJmJQ9vndKlsavRLgWNjzw"
 
     - name: CODER_OIDC_CLIENT_SECRET
-      value: "9pCMdhosoBc7HaxX8n8qKJOj9G91X4zP10FTC4bIDOyiJrTL8hnKG5yE58kYGxtT27kVaZJx19Ou2WWP8kVI9ShxBtPYYizyqwIMWDhYmMhqwAUotWkq2ELkFjUJROuJ"
+      value: <path:kv/data/secret/data/coder/oidc#secret>
 workspacePVC:
   enabled: true
 
