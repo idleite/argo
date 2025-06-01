@@ -8,7 +8,8 @@ authentik:
     host: web.hosts.harryesses.com
   email:
     # -- SMTP Server emails are sent from, fully optional
-    host: "mailrise.mailrise.svc.cluster.local"
+    # host: "mailrise.mailrise.svc.cluster.local"
+    host: "10.104.52.178"
     # -- SMTP server port
     port: 8025
     # -- SMTP credentials, when left empty, no authentication will be done
