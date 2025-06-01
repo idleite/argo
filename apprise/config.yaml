@@ -8,6 +8,6 @@ data:
   # file-like keys
   mailrise.conf: |
     configs:
-    harryessesdev@harryesses.com:
-      urls:
-        - matrixs://test-apprise:disrupt-roamer-oversight@matrix.harryesses.com/!gzIlgk4L6oMU5w0cNc:matrix.harryesses.com
+      harryessesdev@harryesses.com:
+        urls:
+          - matrixs://test-apprise:disrupt-roamer-oversight@matrix.harryesses.com/!gzIlgk4L6oMU5w0cNc:matrix.harryesses.com
