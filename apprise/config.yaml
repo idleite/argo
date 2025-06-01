@@ -7,6 +7,8 @@ data:
 
   # file-like keys
   mailrise.conf: |
+    listen:
+      port: 25
     configs:
       harryessesdev@harryesses.com:
         urls:
