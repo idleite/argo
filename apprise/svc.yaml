@@ -10,9 +10,8 @@ spec:
   type: ClusterIP
   ports:
     - port: 8025
-      targetPort: smtp
+      targetPort: 8025
       protocol: TCP
       name: smtp
   selector:
-    app.kubernetes.io/name: mailrise
     app: mailrise
