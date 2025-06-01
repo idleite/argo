@@ -6,6 +6,7 @@ authentik:
     password: H92InFmRGHGhYG/BESjR4KyxUgriSTBmxUTukv/AdxQ52bM3
   redis:
     host: web.hosts.harryesses.com
+
 server:
   ingress:
     annotations:

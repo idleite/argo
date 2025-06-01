@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mailrise-app
+  labels:
+    app: mailrise
+  namespace: mailrise
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mailrise
+  template:
+    metadata:
+      labels:
+        app: mailrise
+    spec:
+      containers:
+      - name: mailrise-app
+        image: yoryan/mailrise:latest
+        ports:
+        - containerPort: 25
+          name: smtp
