@@ -1,0 +1,43 @@
+ingress:
+  enabled: true
+  ingressClassName: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/proxy-body-size: "100m"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+
+  hosts:
+    - host: semaphore.harryesses.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - hosts:
+        - semaphore.harryesses.com
+      secretName: semaphore-tls
+database:
+  type: postgres
+
+  host: web.hosts.harryesses.com
+  port: 5432
+
+  usernameFromSecret: true
+  uernameKey: username
+  passwordFromSecret: true
+  passwordKey: password
+  existingSecret: semaphore-credentials
+oidc:
+  enable: true
+
+  providers:
+    - name: authentik
+      display_name: Sign in with Authentik
+      provider_url: https://auth.harryesses.com/application/o/semaphore/
+      client_id: MIY4iZO6KHnWddpcEHmF4v0QlzJ2cZqxtVUaEWBx
+      client_secret: DkpjEUzFnlblbXY9yoOvX1ygccHCZtouXrhZ8nI8jSjIEEqepHaZPjIBbMGL1dfmdaGHriBLSUZgI0gtqVQfCJJ5CXMXWO2ddDmYt25QfchGHM93y2zzJoT4gPAA5IRk
+      redirect_url: https://semaphore.harryesses.com/api/auth/oidc/authentik/redirect/
+      username_claim: preferred_username
+      name_claim: preferred_username    
+      email_claim: email
