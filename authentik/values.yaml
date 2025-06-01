@@ -21,7 +21,7 @@ authentik:
     # -- Use SSL. Enable either use_tls or use_ssl, they can't be enabled at the same time.
     use_ssl: false
     # -- Connection timeout
-    timeout: 20
+    timeout: 360
     # -- Email from address, can either be in the format "foo@bar.baz" or "authentik <foo@bar.baz>"
     from: "matrix@mailrise.xyz"
 server:
