@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mailrise-load
+  namespace: mailrise
+  labels:
+    app.kubernetes.io/name: mailrise
+
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 25
+      targetPort: smtp
+      protocol: TCP
+      name: smtp
+  selector:
+    app.kubernetes.io/name: mailrise
