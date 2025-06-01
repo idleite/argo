@@ -54,7 +54,7 @@ coder:
       value: "e271680e-a5ac-406d-b64f-ee785416d524"
 
     - name: CODER_EXTERNAL_AUTH_0_CLIENT_SECRET
-      value: "gto_paw5lj3ozurtnppr4ev5ju5e4zduuf4yogyogqbtfcdzzxyye6uq"
+      value: <path:kv/data/secret/data/coder/oidc#secret>
 
     - name: CODER_EXTERNAL_AUTH_0_AUTH_URL
       value: "https://git.harryesses.com/login/oauth/authorize"
