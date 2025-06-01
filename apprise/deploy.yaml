@@ -25,3 +25,7 @@ spec:
           - mountPath: /etc/mailrise.conf
             name: mailrise-config
             subPath: mailrise.conf
+      volumes:
+        - name: mailrise-config
+          configMap:
+            name: mailrise-config
