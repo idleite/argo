@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mailrise-app
+  name: mailrise
   labels:
     app: mailrise
   namespace: mailrise
@@ -16,7 +16,7 @@ spec:
         app: mailrise
     spec:
       containers:
-      - name: mailrise-app
+      - name: mailrise
         image: yoryan/mailrise:latest
         ports:
         - containerPort: 25
