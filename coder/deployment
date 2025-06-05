@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: coder
+spec:
+  destination:
+    namespace: coder
+    server: https://kubernetes.default.svc
+  source:
+    chart: coder
+    repoURL: https://helm.coder.com/v2
+    targetRevision: 2.22.0
+    helm:
+      valueFiles:
+        - $values/coder/values-coder.yaml
+  sources:
+    - repoURL: https://helm.coder.com/v2
+      targetRevision: 2.22.0
+      helm:
+        valueFiles:
+          - $values/coder/values-coder.yaml
+      chart: coder
+    - repoURL: https://github.com/idleite/argo.git
+      targetRevision: master
+      ref: values
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+

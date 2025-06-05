@@ -1,9 +1,9 @@
 authentik:
   secret_key: "W4VQUreSixCyzkvEkTYt21whI1GDIaypd2B5qQviSlnh5LCvgO7h4xBmRiGvZsXNDuPKRFTVqQeCNlfh"
   postgresql:
-    host: web.hosts.harryesses.com
-    user: authentik
-    password: H92InFmRGHGhYG/BESjR4KyxUgriSTBmxUTukv/AdxQ52bM3
+    host: <path:kv/data/secret/data/authentik/postgresql#host>
+    user: <path:kv/data/secret/data/authentik/postgresql#user>
+    password: <path:kv/data/secret/data/authentik/postgresql#password>
   redis:
     host: web.hosts.harryesses.com
   email:
