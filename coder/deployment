@@ -9,13 +9,13 @@ spec:
   source:
     chart: coder
     repoURL: https://helm.coder.com/v2
-    targetRevision: 2.22.0
+    targetRevision: 2.22.1
     helm:
       valueFiles:
         - $values/coder/values-coder.yaml
   sources:
     - repoURL: https://helm.coder.com/v2
-      targetRevision: 2.22.0
+      targetRevision: 2.22.1
       helm:
         valueFiles:
           - $values/coder/values-coder.yaml
