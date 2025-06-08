@@ -40,6 +40,8 @@ server:
       - metube.harryesses.com
       - ersatz.harryesses.com
       - uptime.harryesses.com
+      - web.code.harryesses.com
+      - main.code.harryesses.com
     tls:
       - hosts:
         - auth.harryesses.com
