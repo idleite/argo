@@ -32,6 +32,7 @@ server:
     enabled: true
     hosts:
       - auth.harryesses.com
+      - pihole.harryesses.com
     tls:
       - hosts:
         - auth.harryesses.com
