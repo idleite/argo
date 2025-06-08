@@ -33,6 +33,12 @@ server:
     hosts:
       - auth.harryesses.com
       - pihole.harryesses.com
+      - radarr.harryesses.com
+      - sonarr.harryesses.com
+      - jackett.harryesses.com
+      - qbitt.harryesses.com
+      - metube.harryesses.com
+      - ersatz.harryesses.com
     tls:
       - hosts:
         - auth.harryesses.com
