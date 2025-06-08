@@ -36,7 +36,7 @@ server:
       - radarr.harryesses.com
       - sonarr.harryesses.com
       - jackett.harryesses.com
-      - qbitt.harryesses.com
+      - qbit.harryesses.com
       - metube.harryesses.com
       - ersatz.harryesses.com
     tls:
