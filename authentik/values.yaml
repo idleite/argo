@@ -39,6 +39,7 @@ server:
       - qbit.harryesses.com
       - metube.harryesses.com
       - ersatz.harryesses.com
+      - uptime.harryesses.com
     tls:
       - hosts:
         - auth.harryesses.com
